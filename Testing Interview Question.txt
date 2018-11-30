@@ -1,0 +1,738 @@
+1. Explain The SOAP and RESTFul Web Service?
+	Mostly, there are two kinds of Web Services which are quite popular.
+
+   # SOAP (Simple Object Access Protocol) which is an XML-based way to expose web services.
+
+   # Web services developed using REST style (Representational State Transfer)are known as RESTful web services. 
+    These web services use HTTP methods to implement the concept of REST architecture. 
+	A RESTful web service usually defines a URI, Uniform Resource Identifier a service, provides resource representation such as JSON and set of HTTP Methods.
+	HTTP verbs: GET, POST, PUT, and DELETE.
+
+
+2. when do we use SOAP and Rest service?
+
+	SOPA Used for : Enterprise apps, high-security apps, distributed environment, financial services, payment gateways, telecommunication services.
+	Rest USed for : Public APIs for web services, mobile services, social networks.
+	
+	
+3. what are transfer protocal used in SOAP and Rest
+	SOAP : HTTP, SMTP, UDP, and others
+	Rest: Only HTTP
+	
+4. What are the advantage of using SOAP and Rest services.
+	SOAP: High security, standardized, extensibility
+	Rest: Scalability, better performance, browser-friendliness, flexibility.
+	
+5. what are the SOAP  Document elements.
+		Envelope (required) – This is the starting and ending tags of the message.
+		Header (optional) – It contains the optional attributes of the message. It allows you to extend a SOAP message in a modular and decentralized way.
+		Body (required) – It contains the XML data that the server transmits to the receiver.
+		Fault (optional) – It carries information about errors occurring during processing the message.
+
+		 
+6. What are the HTTP Status Code: 
+
+CATEGORY				DESCRIPTION
+1xx: Informational	    Communicates transfer protocol-level information.
+2xx: Success			Indicates that the client’s request was accepted successfully.
+3xx: Redirection		Indicates that the client must take some additional action in order to complete their request.
+4xx: Client Error		This category of error status codes points the finger at clients.
+5xx: Server Error		The server takes responsibility for these error status codes.
+https://restfulapi.net/http-status-codes/ 
+
+1. What is an API?
+	An API (Application Programming Interface) that enables two applications to communicate with each other. 
+	API examples,
+		Google Maps API, Amazon Advertising API, Twitter API, YouTube API, etc
+
+2. What are main differences between API and Web Service?
+
+	All Web services are APIs but not all APIs are Web services.
+	Web services might not contain all the specifications and cannot perform all the tasks that APIs would perform.
+	A Web service uses only three styles of use: SOAP, REST for communication whereas API may be exposed to in multiple ways.
+	A Web service always needs a network to operate while APIs don’t need a network for operation.
+	
+3. What are principles of an API test design? or what is the process to write the API test case? or  What is the procedure to perform API testing?
+
+		The five most important principles of an API test design are:
+		
+		Setup: Create objects, start services, initialize data, etc
+		Execution: Steps to apply API or the scenario, including logging
+		Verification: evaluate the result of the execution
+		Reporting: Pass, failed or blocked
+		Clean up: Pre-test state or data created
+
+4. What must be checked when performing API testing?
+	
+	Accuracy of data
+	HTTP status codes
+	different Data type validation 
+	Authorization checks
+	Implementation of response timeout
+	Error codes in case API returns, and
+	Non-functional testing like performance and security testing
+	
+1. What are the testing methods that come under API testing? or What are the common API testing types?
+
+	API testing generally involves following testing methods:
+
+	Unit testing and Functional testing
+	Load testing for testing the performance under load.
+	Discovery testing for listing, creating and deleting the number of calls that has been documented in API.
+	Usability testing and Reliability testing for obtaining consistent results.
+	Security testing and Penetration testing for validating all types of authentication.
+	Automation testing for creating and executing scripts that require API calls execution regularly.
+	End to end Integration testing and Web UI testing.
+	API documentation testing for determining its efficiency and effectiveness.
+	
+
+2.  What all challenges are included under API testing?
+    The first and foremost challenge is selecting an appropriate parameter and then its combination.
+    Parameter categorization
+    Proper sequencing of call is required as this may lead to inadequate coverage in testing.
+    Output verification and validation
+    Another important challenge is providing input values, which is very difficult as GUI is not available in this case.
+	
+	
+3. What are the types of Issues observed while performing API testing?
+
+Find below the list of such issues/defects:
+	Reliability issues with respect to connection with other APIs
+	Inconsistent or absence of error handling mechanism
+	Repetition or redundancy of the functionalities
+	Missing required functionality in some cases
+	Passing incorrect argument to the input values
+	Improper messaging
+	Stress and performance issues
+	
+4. How is UI level testing different from API testing?
+
+    The main consideration of the UI (User Interface) level testing is to test the graphical interface part of the application including the features like font, layout, etc.
+
+    Whereas, the main consideration of the API testing is establishing communication between different software systems and it mainly resides in business logic layer. 
+    It never concentrates on the look of the application.
+	
+
+5. What are the tools used for API test automation?
+SOAPUI
+PARASOFT
+Jmeter
+Postman - Chrome 
+Poster for Firefox browser.
+
+6.  Can You Tell Us Which Java API Helps In Developing A RESTFul Web Service?
+	JAX-RS library - is a standard way to develop a REST web service.
+	Jersey 
+	Apache CFX.
+	RESTEasy
+	RESTEasy
+	
+
+
+6. Mention what are the HTTP methods ( or verbs)supported by REST?
+
+GET: It requests a resource at the request URL. It should not contain a request body as it will be discarded. Maybe it can be cached locally or on the server.
+POST: It submits information to the service for processing; it should typically return the modified or new resource
+PUT: At the request URL it update the resource
+DELETE: At the request URL it removes the resource.
+
+
+7. Mention what is the difference between PUT and POST?
+
+GET 	/device-management/devices : Get all devices
+POST 	/device-management/devices : Create a new device
+
+GET 	/device-management/devices/{id} : Get the device information identified by "id"
+PUT 	/device-management/devices/{id} : Update the device information identified by "id"
+DELETE	/device-management/devices/{id} : Delete device by "id"
+
+ PUT puts a file or resource at a particular URI and exactly at that URI. If the resource already exists, then PUT updates it. If it’s a first-time request, then PUT creates one.
+ POST sends data to a particular URI and expects the resource at that URI to deal with the request. The web server at this point can decide what to do with the data in the context of specified resource.
+
+
+Generally, in practice, always use PUT for UPDATE operations.
+Always use POST for CREATE operations.
+
+
+8. What are API documentation templates that are commonly used?
+  Swagger - The ability of APIs to describe their own structure.
+  
+
+ 11. what are n-Tier Architecture? 
+ 
+	Three-Tier Architecture: The Three-tier architecture is divided into three parts:Client system handles Presentation layer, Application server handles Application layer and Server system handles Database layer.
+		1. Presentation layer (Client Tier)
+		2. Application layer (Business Tier)
+		3. Database layer (Data Tier)
+	
+	Two-tier architecture: Client system handles both Presentation and Application layers and Server system handles Database layer. It is also known as client server application. The communication takes place between the Client and the Server. Client system sends the request to the Server system and the Server system processes the request and sends back the data to the Client System
+		1. Client Application (Client Tier)
+		2. Database (Data Tier)
+	
+	
+	One Tier Architecture:One Tier application AKA Standalone application
+	One tier architecture has all the layers such as Presentation, Business, Data Access layers in a single software package. Applications which handles all the three tiers such as MP3 player, MS Office are come under one tier application. The data is stored in the local system or a shared drive.
+	
+
+	Note: Another layer is N-Tier application. N-Tier application AKA Distributed application. It is similar to three tier architecture but number of application servers are increased and represented in individual tiers in order to distributed the business logic so that the logic will be distributed.
+	
+	
+	
+---------------------------------################################### Agile Testing Interview Questions ###########################-----------------------------------------------------
+Q#1. What is Agile Testing?
+Ans. Agile Testing is a practice that a QA follows in a dynamic environment where testing requirements keep changing according to the customer needs. It is done parallel 
+	to the development activity where the testing team receives frequent small codes from the development team for testing.
+
+
+Q#2. What is the difference between burn-up and burn-down chart?
+Ans. Burn-up and burn-down charts are used to keep track of the progress of the project.
+	Burn-up charts represent how much work has been completed in any project whereas Burn-down chart represents the remaining work in a project.
+
+Q#3. Define the roles in Scrum?
+
+Ans. There are mainly three roles that a Scrum team have:
+
+Project Owner – who has the responsibility of managing the product backlog. Works with end users and customers and provide proper requirement to the team to build the proper product.
+Scrum Master – who works with scrum team to make sure each sprint gets complete on time. Scrum master ensure proper work flow to the team.
+Scrum Team – Each member in the team should be self-organized, dedicated and responsible for high quality of the work.
+  
+Q#4. What is Product backlog & Sprint Backlog?
+
+Ans. Product backlog is maintained by the project owner which contains every feature and requirement of the product.
+
+Sprint backlog can be treated as subset of product backlog which contains features and requirements related to that particular sprint only.
+
+
+Q#9. Explain the Iterative and Incremental Development in Agile?
+
+Ans. Iterative Development: Software is developed and delivered to customer and based on the feedback again developed in cycles or release and sprints. Say in Release 1 software is developed in 5 sprints and delivered to customer. Now customer wants some changes, then development team plan for 2nd release which can be completed in some sprints and so on.
+
+Incremental Development:Software is development in parts or increments. In each increment a portion of the complete requirement is delivered.
+
+
+Q#10. How do you deal when requirements change frequently?
+
+Ans: Work with PO to understand the exact requirement to update test cases. Also understand the risk in changing the requirement. Apart from this one should be able to write generic test plan and test cases. Don’t go for the automation until requirements are finalized.
+
+Q#12. What qualities should a good Agile tester have?
+Ans.
+
+Agile tester should be able to understand the requirements quickly.
+Agile tester should know Agile concepts and principals.
+As requirements keep changing, he should understand the risk involve in it.
+Agile tester should be able to prioritize the work based on the requirements.
+Communication is must for a Agile tester as it requires a lot of communication with developers and business associates.
+
+
+Q#13. What is difference between Epic, User stories & Tasks?
+
+Ans. 
+User Stories:User Stories defines the actual business requirement. Generally created by Business owner.
+
+Task: To accomplish the business requirements development team create tasks.
+
+Epic: A group of related user stories is called an Epic.
+
+
+Q#19. What is Zero sprint in Agile?
+
+Ans. It can be defined as pre step to the first sprint. Activities like setting development environment, preparing backlog etc needs to be done before starting of the first sprint and can be treated as Sprint zero.
+
+Q#20. What is Spike?
+
+Ans. There may be some technical issues or design problem in the project which needs to be resolved first. To provide the solution of these problem “Spikes” are created. Spikes are of two types- Functional and Technical.
+
+Q#22. What is importance of daily stand up meeting?
+
+Ans. Daily stand up meeting is essential for any team in which-
+
+Team discuss about how much work has been completed.
+What are the plans to resolve technical issues.
+What steps need to done to complete the projects etc.
+
+
+
+---------------------------------#############################################QA Lead Interview Questions######################################---------------------------------------
+1. Have you had a defect that was found by a customer that should have been caught during the testing phase? If so, how did you handle the escaped defect.
+	Ans: I followed up with the customer and asked how they discovered the defect. I then determined what part of the troubleshooting process we missed that would have revealed the defect to us.
+
+2. How do you know that your testing covered all the functionality?
+	Ans: Code coverage tools
+	
+Q #1. What were your roles and responsibilities and how was your time divided between tasks in a project?
+
+Ans :
+
+
+50%- Testing activities- depending on the stage the project is in, this might be tested planning, design or execution
+20%- review
+10%- coordination
+20%- client communication and delivery management
+
+Q #4. Have you been involved in test estimation and how do you do it?
+
+Test estimation gives an approximate idea of how much time, effort and resources are required to test.
+
+
+3) Mention what Requirement Traceability Matrix is?
+	Requirement Traceability Matrix is linking of requirement documents to test cases. It is used for the following reason
+
+	To ensure that all the application requirements are tested in the verification process
+	To check Test Coverage
+	
+4) How would you select a Testing tool for your project?
+
+	Identify features required in an automation tool as per the project needs
+	Evaluate commercial and noncommercial tools that meet the requirements
+	Estimate cost and benefit of the tool. Cost could include licenses and training.
+	Make the final decision in consultation with team members.
+
+5. What does a good test report include?
+	Project Information
+	Test Objective
+	Test Summary - Total No of Test Cases, No of test case executed, pass, fail, block
+	Defect - Open, Closed, In-progress
+	
+6. By what factors you can determine the quality of the test execution?
+
+	Defect rejection ratio: (No. of defects rejected/ total no. of defects raised) X 100
+	Defect leakage ratio: (No. of defect missed/total defects of software) X 100
+	
+
+20) How will you manage Team Conflicts?
+
+With the diversity in backgrounds and working styles of team members, the first step is to expect and prepare for conflicts during the test project.
+
+The next step is to hold a meeting and appraise team members of the project status. 
+The Test Lead needs to keep communication open for everyone such that the team frustrations and anger are vented out. 
+Lastly, ask the team members to co-operate and stress the importance of their cooperation for the success of the project.
+
+
+8. Name a negative situation I was in and how did I handle it.  
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------#########################################Learing Soap UI###############################################--------------------------------------------------------
+
+https://www.youtube.com/playlist?list=PLhW3qG5bs-L-Bt9T_bnyflQ0Te4VgFhKF
+
+
+Project - Test Suite - Test Case - Test Step
+
+
+Sample REST URI - http://thomas-bayer.com/sqlrest/CUSTO...
+
+
+Today we will learn:
+
+1. How to create a SOAP API Project
+2. How to add WSDL
+3. How to create Test Suite - Test Cases
+4. How to add Assertions
+5. Run Test Step - Test Case - Test Suite
+6. How to run in sequence and in parallel
+7. How to create API Documentation
+
+WSDL - http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl
+
+
+
+
+Today we will learn:
+
+1. Create a REST Project
+2. Add a REST request 
+3. How to add request parameters
+4. Create a Test Case
+5. Add assertions
+6. Run and Validate
+
+
+https://restcountries.eu/
+
+
+Today we will learn:
+
+1. What is property in soapui
+2. Why do we use it
+3. How to create properties at different levels
+4. How to refer properties
+
+Properties can be used as variables to store values that can be referred in testing
+
+Properties can be accessed at following levels:
+Project       	-  ${#Project#PropertyName}
+TestSuite   	-  ${#TestSuite#PropertyName}
+TestCase   		-  ${#TestCase#PropertyName}
+TestStep    	-  ${TestStepName#PropertyName}   ------ Imp See the difference
+
+System   		-  ${#System#PropertyName}
+Env        		-  ${#Env#PropertyName}
+Global    		-  ${#Global#PropertyName} 
+
+
+
+Today we will learn: How to Get and Set Properties through GROOVY scripts
+
+1. How to get property
+2. How to set property
+3. How to add property
+4. How to remove property
+5. How to loop through all properties
+
+
+https://www.soapui.org/scripting-properties/tips-tricks.html
+
+
+
+// Get and Set Property
+
+//Project
+testRunner.testCase.testSuite.project.getPropertyValue("Name")
+testRunner.testCase.testSuite.project.setPropertyValue("Name","I am in Project")
+
+//TestSuite
+testRunner.testCase.testSuite.getPropertyValue("Name")
+testRunner.testCase.testSuite.setPropertyValue("Name","I am in TestSuite")
+
+//TestCase
+testRunner.testCase.getPropertyValue("Name")
+testRunner.testCase.setPropertyValue("Name","I am in TestCase")
+
+//TestStep
+testRunner.testCase.getTestStepByName("CountryCodes").getPropertyValue("Name")
+testRunner.testCase.getTestStepByName("CountryCodes").setPropertyValue("Name","I am in Test Step")
+
+//Global
+com.eviware.soapui.SoapUI.globalProperties.getPropertyValue( "Name")
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue( "Name","I am in Global Prop" )
+
+
+// Add Property
+testRunner.testCase.testSuite.project.addProperty("DOB")
+
+// Remove property
+//Project
+testRunner.testCase.testSuite.project.removeProperty("Name");
+//TestSuite
+testRunner.testCase.testSuite.removeProperty("Name")
+
+// Loop through properties
+
+testRunner.testCase.properties.each
+{
+ key,value -
+ log.info (testRunner.testCase.getPropertyValue(key))
+ //log.info (key+" - "+value)
+}
+
+
+
+
+Today we will learn: How to do Property Transfer | Values Transfer
+
+1. How to send values from response of one api to request of another api
+
+
+
+Today we will learn:
+-----------------------------
+1. What is Groovy
+2. How to add groovy scripts in SoapUI
+3. How to do basic coding in groovy in SoapUI
+4. Basic Object Oriented Programming. (Classes and Objects)
+
+https://www.soapui.org/apidocs/com/eviware/soapui/model/testsuite/TestRunner.html
+
+
+Code Snippets
+=============
+import java.io.*;   --- C:\Program Files (x86)\SmartBear\SoapUI-5.3.0\bin\ext  ( we can give any jar file here and use this jar file)
+
+log.info ("        Hello World ...  ");
+
+int a = 10 ;
+int b = 20 ;
+int c = a+b ;
+log.info ("   Result is : "+c) ;
+
+// this is a single line comment
+
+/*
+ * This is
+ * multiline comment
+ */
+
+ //log
+ //context
+ //testRunner
+
+log.info testRunner.metaClass.methods*.name.unique().sort()
+
+
+
+======================
+
+class Hello{
+
+ def log;
+ def context;
+ def testRunner;
+
+ def Hello(log, context, testRunner){
+  this.log = log
+  this.context = context
+  this.testRunner = testRunner
+ }
+
+ def sayHello(String name){
+  log.info ("   Hello "+name);
+ }
+ 
+}
+
+context.setProperty("Hello", new Hello(log,context,testRunner))
+
+
+========================
+
+def testStep = testRunner.testCase.getTestStepByName("Hello")
+
+testStep.run(testRunner, context)
+
+context.Hello.sayHello("Raghav")
+
+============================
+
+project = testRunner.testCase.testSuite.project ;
+ tcase = project.testSuites["TestSuite3"].testCases["TestCase1"] ; 
+ hello = tcase.getTestStepByName("Hello");
+
+hello.run(testRunner, context)
+
+context.Hello.sayHello("Raghav")
+
+
+project = testRunner.testCase.testSuite.project ;
+ tcase = project.testSuites["TestSuite"].testCases["TestCaseName"] ; 
+ hello = tcase.getTestStepByName("Hello");
+
+
+log.info testRunner.metaClass.methods*.name.unique().sort()
+
+context.setProperty("Hello", new Hello(log,context,testRunner))
+
+
+
+
+def hello = testRunner.testCase.getTestStepByName("Hello");
+
+hello.run(testRunner, context)
+
+def ref = context.Hello;
+ref.printHello("Raghav");
+
+
+==============================================
+
+
+Today we will learn:
+
+1. How to run a request or step from GUI
+2. How to run a request or step from Groovy
+3. Options for command line runs - Launch Test Runner will come only on Test case or test suite level. this will not be available for step level.
+
+Useful TIPS
+
+//Groovy - run request from same TestCase
+def status = testRunner.runTestStepByName("GetCountryISOCode")
+def result = status.getStatus().toString();
+
+//INFO:   ---- UNKNOWN --- we have to give assertation to avoid unknown
+log.info ("   ---- "+ result)
+
+if(result == "OK"){
+	log.info (" Test Passed ")
+}else{
+
+	log.info (" Test Failed ")
+	
+}
+
+
+//Groovy - run request from another TestCase or TestSuite
+project = testRunner.testCase.testSuite.project ;
+tcase = project.testSuites["TestSuiteName"].testCases["TestCaseName"] ; 
+tstep = tcase.getTestStepByName("TestStepName");
+def status = tstep.run(testRunner, context)
+def result = status.getStatus().toString();
+log.info ("   ----   "+result)
+
+
+
+
+
+
+Today we will learn:
+-------------------------
+1. How to run a Test Case from GUI - Note: you can alos run in loop
+2. How to run a Test Case from Groovy - Note: we should create script in different test case folder becuase if we create in same it will run in loop.
+3. How to run a Test Case from CommandLine 
+
+Useful TIPS
+---------------
+How to get list of all TCs in a test suite
+Get TestCaseName - testRunner.testCase.name
+
+
+
+Notes:
+groovy code to run test case
+=====================
+def tCase = testRunner.testCase.testSuite.testCases["TestCaseName"]
+runner = tCase.run(new com.eviware.soapui.support.types.StringToObjectMap(), false);
+
+log.info (" >>>>>" + runner.getStatus().toString());
+
+
+groovy code to loop test cases in a test suite
+==================================
+def testCases = context.testCase.testSuite.getTestCaseList() 
+testCases.each{
+log.info(it.name)
+}
+
+
+command line run
+==============
+
+directory fo to this: C:\Program Files (x86)\SmartBear\SoapUI-5.3.0\bin\.
+command: testrunner.bat -sTestSuite3 "C:\Users\tpvnt\Desktop\Anuj-TX\SOAP UI\SOAP - N\CountryInfoService-soapui-project.xml"
+
+
+
+	
+
+Today we will learn:
+-------------------------
+1. How to run a TestSuite from GUI
+2. How to run a TestSuite from Groovy
+3. How to run a TestSuite from CommandLine
+
+
+Groovy script
+-------------------
+def suite = context.testCase.testSuite.project.testSuites["TestSuiteName"]
+suite.run(null,false)
+// null can be replaced with : new com.eviware.soapui.support.types.StringToObjectMap()
+log.info ("   ===   "+suite.getName().toString()+" - Executed successfully")
+
+
+command line run
+----------------------------
+directory: C:\Program Files (x86)\SmartBear\SoapUI-5.3.0\bin\.
+command:testrunner.bat -sTestSuite2 "C:\Users\tpvnt\Desktop\Anuj-TX\SOAP UI\SOAP - N\CountryInfoService-soapui-project.xml"
+
+
+
+
+
+Today we will learn:
+-------------------------
+1. How to run a Project from GUI
+2. How to run a Project from Groovy
+3. How to run a Project from CommandLine
+
+
+groovy script
+------------------
+def projectName=testRunner.getTestCase().getTestSuite().getProject().getWorkspace().getProjectByName("REST Project 1")
+projectName.run(null,true)
+//projectName.run(new com.eviware.soapui.support.types.StringToObjectMap(), false)
+
+command line run
+--------------------------
+
+
+
+directory: C:\Program Files (x86)\SmartBear\SoapUI-5.3.0\bin\.
+command: testrunner.bat "C:\Users\tpvnt\Desktop\Anuj-TX\SOAP UI\SOAP - N\CountryInfoService-soapui-project.xml"
+
+
+
+
+
+Today we will learn:
+--------------------------
+1. Different types of logs in SoapUI
+2. How to view soapui general and error log files
+
+
+
+
+Today we will learn:
+--------------------------
+1. What is SetUp and TearDown
+2. Why to use it
+3. How to use SetUp and TearDown scripts in SoapUI
+4. How to set SetUp and TearDown with groovy scripts
+
+Setup - runs before running the element in context
+Teardown - runs after running the element in context
+
+
+groovy code to set and get setup and teardown scripts 
+--------------------------------------------------------------------------
+testRunner.testCase.testSuite.project.getTestSuiteByName('TestSuite1').getTestCaseByName('TestCase1').setSetupScript('log.info "setup"')
+testRunner.testCase.testSuite.project.getTestSuiteByName('TestSuite1').getTestCaseByName('TestCase1').setTearDownScript('log.info "teardown"')
+
+log.info ("  --  "+testRunner.testCase.getSetupScript());
+log.info ("  --  "+testRunner.testCase.getTearDownScript());
+
+
+groovy code can be given at project load script to load setup and teardown scritps from file
+--------------------------------------------------------------------------------------------------------------------------
+def su = new File("setup.txt").text
+def td  = new File("teardown.txt").text
+
+project.getTestSuiteList().each { testSuite -
+ testSuite.getTestCaseList().each { testCase -
+  testCase.setSetupScript(su)
+  testCase.setTearDownScript(td)
+ }
+}
+
+Today we will learn:
+--------------------------
+
+1. What are assertions
+2. Why do we add assertions
+3. Diff types of assertions in SoapUI
+
+
+ASSERTIONS - validations on the response
+
+
+Today we will learn
+
+How to add different assertions in SoapUI
+
+Contains 
+XPath Match
+XQuery Match
+Compliance
+JSON Path assertions
+
+SLA - SERVICE LEVEL AGREEMENT
+
+
+JSON PATH FINDER - chrome-extension://bankcpekihijigplompggpdolehhnale/index.html
